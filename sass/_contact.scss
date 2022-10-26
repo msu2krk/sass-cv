@@ -1,0 +1,32 @@
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0;
+    min-height: 100vh;
+    .contact {
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 15px;
+        .contact-left {
+            width: calc(100% / 3);
+            display: block;
+            padding: 30px 15px;
+            .contact-data-phone {
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+        }
+        .contact-right {
+            width: calc(2 * (100% / 3));
+            display: block;
+            padding: 30px 15px;
+        }
+    }
+}
