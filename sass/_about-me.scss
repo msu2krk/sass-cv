@@ -1,4 +1,5 @@
 .about-me {
+    padding: 100px 0;
     .person{
         display: flex;
         margin: 0 -15px;
@@ -81,6 +82,11 @@
         .time-line {
             width: 50%;
             padding: 0 15px;
+            @media (max-width:1000px) {
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+            }
             .h3 {
                 font-size: 20px;
                 margin: 0 0 50px 0;
@@ -96,6 +102,9 @@
                     background-color:$mainColor;
                     left: 16px;
                     top: 1px;
+                    @media (max-width:1000px) {
+                        display: none;
+                    }
                 }
                 &::after {
                     content: '';
@@ -125,6 +134,67 @@
                 }
                 &:last-of-type {
                     padding: 0 0 5px 34px;
+                }
+            }
+        }
+    }
+    .skills {
+        padding: 100px 0;
+        h3 {
+           font-size: 24px;
+            font-weight: 900;
+            margin: 0 0 50px 0;
+        }
+        .progress-bars {
+            display: flex;
+            margin: 0 -15px;
+            flex-wrap: wrap;
+            .item {
+                width: calc(100% / 3);
+                padding: 0 15px;
+                margin: 0 0 40px 0;
+                .language {
+                    margin: 0 0 24px 0;
+                }
+                .bar {
+                    height: 2px;
+                    background-color:$progressBarBgBottonColor;
+                }
+                .bg {
+                    height: 2px;
+                    background-color:$mainColor;
+                    position: relative;
+                    .cloud {
+                        border: 1px solid $mainColor;
+                        width: 46px;
+                        height: 32px;
+                        text-align: center;
+                        line-height: 32px;
+                        border-radius: 5px;
+                        color: var(--mainColor);
+                        position: absolute;
+                        right: -23px;
+                        top: -40px;
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            display: block;
+                            width: 10px;
+                            height: 10px;
+                            border: 1px solid $mainColor;
+                            rotate: 45deg;
+                            left: 50%;
+                            translate: -50% -6px;
+                            background-color:$bodyBGColor;
+                            border-width: 0 1px 1px 0;
+                        }
+                    }
+                }
+                @media (max-width:1000px) {
+                    width: 50%;
+                }
+                @media (max-width:600px) {
+                    width: 100%;
                 }
             }
         }
