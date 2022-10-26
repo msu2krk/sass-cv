@@ -1,0 +1,49 @@
+.global-header {
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+    text-align: center;
+    padding-top: 50px;
+
+    h2 {
+        font-size: clamp(2.1875rem, 1.7169rem + 2.3529vw, 3.4375rem);
+        font-weight: 900;
+        margin: 0 0 15px 0;
+    }
+
+    p {
+        font-size: clamp(0.75rem, 0.6559rem + 0.4706vw, 1rem);
+        line-height: 1.5;
+        margin: 0;
+        position: relative;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: $mainColor;
+            height: 2px;
+            width: 50px;
+            top: 50%;
+            translate: -150% 0;
+            @media (max-width: 1200px) {
+                display: none;
+            }
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: $mainColor;
+            height: 2px;
+            width: 50px;
+            top: 50%;
+            right: 0;
+            translate: 150% 0;
+            @media (max-width: 1200px) {
+                display: none;
+            }
+        }
+    }
+}

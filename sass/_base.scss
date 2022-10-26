@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 50px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+body {
+    background-color: $bodyBGColor;
+    font-family: $mainFontFamily;
+    color: $mainTextColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headerFontFammily;
+    color: $mainTextColor;
+    span {
+        color: $mainColor;
+    }
+}
+
+
+
+

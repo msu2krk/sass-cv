@@ -1,0 +1,77 @@
+.about-me {
+    .person{
+        display: flex;
+        margin: 0 -15px;
+        align-items: center;
+        flex-wrap: wrap;
+        .photo {
+            width: 50%;
+            padding: 0 15px;
+            @media (max-width:1000px){
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto 40px auto;
+            }
+            .frame {
+                padding: 0 30px 30px 30px;
+                position: relative;
+                &::after {
+                    content: '';
+                    border: 6px solid $mainColor;
+                    width: calc(100% - 60px);
+                    height: calc(100% - 30px);
+                    position: absolute;
+                    top: 30px;
+                    left: 60px;
+                    z-index: -1;
+                }
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        .info {
+            width: 50%;
+            padding: 0 15px;
+            @media (max-width:1000px){
+                width: 100%;
+                .button-download {
+                    text-align: center;
+                }
+            }
+            .data {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 -15px 30px -15px;
+                ul {
+                    list-style-type: none;
+                    width: 50%;
+                    padding: 0 15px;
+                    margin: 0;
+                    @media (max-width:1000px){
+                        &:first-of-type {
+                            text-align: right;
+                        }
+                    }
+                    li {
+                        margin: 0 0 20px 0;
+                        @media (max-width:1000px) {
+                            span {
+                                display: block;
+                            }
+                        }
+                        .name {
+                            opacity: 0.8;
+                            padding-right: 20px;
+                            @media (max-width:1000px) {
+                                margin: 0 0 6px 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
